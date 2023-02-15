@@ -1,15 +1,11 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace RelevésMétéo
+﻿namespace RelevésMétéo
 {
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
-			AfficherListe();
-			Console.WriteLine();
+			//AfficherListe();
 			AfficherTableau();
-			Console.ReadKey();
 		}
 
 		static void AfficherListe()
@@ -40,15 +36,13 @@ namespace RelevésMétéo
 
 		static void AfficherTableau()
 		{
-			string[] lignes = File.ReadAllLines("meteoParis.csv");
-
-			const string EnTeteTableau = """
-				   Mois | T° min | T° max | Soleil | Pluie (mm) 
+			const string entetes = """
+				   Mois | T° min | T° max | Soleil | Pluie (mm)
 				-----------------------------------------------
 				""";
+			Console.WriteLine(entetes);
 
-			Console.WriteLine(EnTeteTableau);
-
+			string[] lignes = File.ReadAllLines("meteoParis.csv");
 			for (int i = 1; i < lignes.Length; i++)
 			{
 				// Simplifie le format des heures d'ensoleillement
@@ -57,12 +51,16 @@ namespace RelevésMétéo
 				// Récupère les infos de la ligne dans un tableau
 				string[] infos = ligne.Split(';');
 
-				float.TryParse(infos[2], out float tmin);
-				float.TryParse(infos[3], out float tmax);
-				float.TryParse(infos[7], out float pluie);
-
-				// Construit une ligne sous la forme souhaitée
-				Console.WriteLine($"{infos[0]}/{infos[1]} | {tmin,6:F1} | {tmax,6:F1} | {infos[6],6} | {pluie,10:F1}");
+				// Transforme les chaînes en nombres
+				if (float.TryParse(infos[2], out float tmin) &&
+					float.TryParse(infos[3], out float tmax) &&
+					float.TryParse(infos[7], out float pluie))
+				{
+					// Affiche la ligne sous la forme souhaitée
+					Console.WriteLine($"{infos[0]}/{infos[1]} | {tmin,6:N1} | {tmax,6:N1} | {infos[6],6} | {pluie,10:N1}");
+				}
+				else
+					Console.WriteLine("Erreur à la ligne {0}", i);
 			}
 		}
 	}
