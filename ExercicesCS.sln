@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizzCapitales", "QuizzCapitales\QuizzCapitales.csproj", "{59BE4168-287F-4820-94E4-D4044689E911}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelevésMétéo", "RelevésMétéo\RelevésMétéo.csproj", "{EA6858CC-767F-41F7-A88D-AA3646A2E901}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RelevésMétéo", "RelevésMétéo\RelevésMétéo.csproj", "{EA6858CC-767F-41F7-A88D-AA3646A2E901}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendrierPerpetuel", "CalendrierPerpetuel\CalendrierPerpetuel.csproj", "{08287C49-FCE3-48E2-8AFD-3BBA3EB404DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{EA6858CC-767F-41F7-A88D-AA3646A2E901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA6858CC-767F-41F7-A88D-AA3646A2E901}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA6858CC-767F-41F7-A88D-AA3646A2E901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08287C49-FCE3-48E2-8AFD-3BBA3EB404DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08287C49-FCE3-48E2-8AFD-3BBA3EB404DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08287C49-FCE3-48E2-8AFD-3BBA3EB404DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08287C49-FCE3-48E2-8AFD-3BBA3EB404DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
