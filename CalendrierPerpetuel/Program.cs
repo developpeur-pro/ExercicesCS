@@ -1,4 +1,6 @@
-﻿namespace CalendrierPerpetuel
+﻿using Microsoft.VisualBasic;
+
+namespace CalendrierPerpetuel
 {
 	internal class Program
 	{
@@ -32,7 +34,7 @@
 				- hiver     : {hiver.ToString(format)}
 				""");
 
-			//Affichage des jours fériés
+			// Affichage des jours fériés
 			(DateOnly, string)[] joursFériés = CalculateurCalendrier.CalculerJoursFériésFrançais(année);
 			Console.WriteLine($"\nJours fériés de l'année {année}{sep}");
 			foreach ((DateOnly date, string libellé) jour in joursFériés)
@@ -45,6 +47,20 @@
 			Console.WriteLine($"\nChangements d'heures de l'année {année}{sep}");
 			Console.WriteLine($"- Heure d'été   : {changements.heureEté.ToString(format2)}");
 			Console.WriteLine($"- Heure d'hiver : {changements.heureHiver.ToString(format2)}");
+			Console.WriteLine();
+
+			// Saisie de la date d'anniversaire
+			DateOnly dateAnniv = new DateOnly();
+			do
+			{
+				Console.WriteLine("Quelle est votre date d'anniversaire (JJ/MM) ?");
+				string? anniv = Console.ReadLine();
+				saisieOK = DateOnly.TryParseExact(anniv, "dd/MM", out dateAnniv);
+			} while (!saisieOK);
+
+			// Calcul du jour de la semaine de l'anniversaire pour l'année
+			dateAnniv = new DateOnly(année, dateAnniv.Month, dateAnniv.Day);
+			Console.WriteLine($"\nEn {année}, votre anniversaire sera un {dateAnniv.ToString("dddd")}");
 		}
 	}
 }
