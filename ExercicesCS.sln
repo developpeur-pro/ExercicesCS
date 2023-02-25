@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RelevésMétéo", "Relevés
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendrierPerpetuel", "CalendrierPerpetuel\CalendrierPerpetuel.csproj", "{08287C49-FCE3-48E2-8AFD-3BBA3EB404DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concours", "Concours\Concours.csproj", "{7854B2AB-BCF7-4FA2-B328-3DC889BF9D32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{08287C49-FCE3-48E2-8AFD-3BBA3EB404DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08287C49-FCE3-48E2-8AFD-3BBA3EB404DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08287C49-FCE3-48E2-8AFD-3BBA3EB404DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7854B2AB-BCF7-4FA2-B328-3DC889BF9D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7854B2AB-BCF7-4FA2-B328-3DC889BF9D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7854B2AB-BCF7-4FA2-B328-3DC889BF9D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7854B2AB-BCF7-4FA2-B328-3DC889BF9D32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
