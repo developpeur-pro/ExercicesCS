@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 namespace Concours
 {
 	internal enum Mentions { E=0, P=10, AB=12, B=14, TB=16 }
-	
+	[Flags] internal enum Statuts { Aucun = 0, Etranger = 1, Boursier = 2, Admis = 4 }
+
 	internal class Notation
 	{
 		static string[] LibellésMentions = { "Echec", "Passable", "Assez bien", "Bien", "Très bien" };
 		
+
 		public static (Mentions, string) GetMention(double note)
 		{
 			Mentions mention = Mentions.E;
