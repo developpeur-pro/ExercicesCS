@@ -2,140 +2,103 @@
 {
 	internal class Program
 	{
-		static (string nom, double moyenne, Statuts statuts)[]? étudiants;
-		const int NbAdmis = 50;
-
 		static void Main(string[] args)
 		{
-			ChargerDonnées();
+			DAL.ChargerDonnées();
 			AfficherRésultatsConcours();
+			Console.ReadKey();
+			Console.Clear();
+
 			AfficherEtudiantsEtrangersAdmis();
+
+			Console.ReadKey();
+			Console.Clear();
+
 			AfficherEtudiantsFrançaisBoursiers();
-			RemplacerEtudiantsAdmis("Douglas Léa", "Gargamel", "Leduc Justin");
+
+			Console.ReadKey();
+			Console.Clear();
+
+			string[] remplacés = { "Douglas Léa", "Cartier Claude", "Leduc Justin" };
+			string[] remplaçants = DAL.RemplacerEtudiantsAdmis(remplacés);
+			for (int r = 0; r < remplacés.Length; r++)
+			{
+				Console.WriteLine($"Remplacement de {remplacés[r]} par {remplaçants[r]}");
+			}
+			Console.WriteLine();
 			AfficherRésultatsConcours();
-			Console.ReadKey(); 
+			Console.ReadKey();
 		}
 
-		// Charge le fichier des étudiants dans un tableau de tuples
-		static void ChargerDonnées()
+		/// <summary>
+		/// Affiche le texte passé en paramètre avec la couleur spécifiée
+		/// </summary>
+		/// <param name="texte">texte à afficher</param>
+		/// <param name="couleur">couleur de police à utiliser</param>
+		static void AfficherTexte(string texte, ConsoleColor couleur = ConsoleColor.Blue)
 		{
-			string[] lignes = File.ReadAllLines("Etudiants.csv");
-
-			étudiants = new (string, double, Statuts)[lignes.Length - 1];
-
-			for (int l = 1; l < lignes.Length; l++)
-			{
-				string[] infos = lignes[l].Split(';');
-				étudiants[l - 1].nom = infos[0] + " " + infos[1];
-				étudiants[l - 1].moyenne = double.Parse(infos[4]);
-
-				Statuts st = Statuts.Aucun;
-				if (infos[2] == "O") st = Statuts.Etranger;
-				if (infos[3] == "O") st |= Statuts.Boursier;
-				if (l <= NbAdmis) st |= Statuts.Admis;
-
-				étudiants[l - 1].statuts = st;
-			}
+			ConsoleColor couleurOrigine = Console.ForegroundColor;
+			Console.ForegroundColor = couleur;
+			Console.WriteLine(texte);
+			Console.ForegroundColor = couleurOrigine;
 		}
 
 		// Affiche les résultats du concours (étudiants avec leurs moyennes et mentions)
 		static void AfficherRésultatsConcours()
 		{
-			if (étudiants == null) return;
+			if (DAL.Etudiants == null) return;
 
-			Console.WriteLine($"Résultats du concours :\n");
-			for (int i = 0; i < étudiants.Length; i++)
+			AfficherTexte($"Résultats du concours :\n");
+			for (int i = 0; i < DAL.Etudiants.Length; i++)
 			{
-				(Mentions mention, string libellé) mention = Notation.GetMention(étudiants[i].moyenne);
-				string res = étudiants[i].statuts.HasFlag(Statuts.Admis) ? "Admis" : string.Empty;
+				(Mentions mention, string libellé) mention = Notation.GetMention(DAL.Etudiants[i].moyenne);
+				string res = DAL.Etudiants[i].statut.HasFlag(Statuts.Admis) ? "Admis" : string.Empty;
 
-				Console.WriteLine($"{étudiants[i].nom,-20} : {étudiants[i].moyenne,5:N1}  {mention.libellé,-12} {res}");
+				Console.WriteLine($"{DAL.Etudiants[i].nom,-20} : {DAL.Etudiants[i].moyenne,5:N1}  {mention.libellé,-12} {res}");
 			}
 
-			Console.WriteLine($"\n{NbAdmis} étudiants admis sur {étudiants.Length}");
+			AfficherTexte($"\n{DAL.NbAdmis} étudiants admis sur {DAL.Etudiants.Length}", ConsoleColor.DarkGreen);
 		}
 
 		// Affiche les noms des étudiants étranger admis à l'école
 		static void AfficherEtudiantsEtrangersAdmis()
 		{
-			if (étudiants == null) return;
+			if (DAL.Etudiants == null) return;
 
-			Console.WriteLine("\nEtudiants étrangers admis :\n");
+			AfficherTexte("Etudiants étrangers admis :\n");
 			int cpt = 0;
 
-			for (int i = 0; i < étudiants.Length; i++)
+			for (int i = 0; i < DAL.Etudiants.Length; i++)
 			{
-				if (étudiants[i].statuts.HasFlag(Statuts.Etranger | Statuts.Admis))
+				if (DAL.Etudiants[i].statut.HasFlag(Statuts.Etranger | Statuts.Admis))
 				{
 					cpt++;
-					Console.WriteLine($"{étudiants[i].nom,-20}");
+					Console.WriteLine($"{DAL.Etudiants[i].nom,-20}");
 				}
 			}
 
-			Console.WriteLine($"\nTotal : {cpt} étudiants étrangers admis");
+			AfficherTexte($"\nTotal : {cpt} étudiants étrangers admis", ConsoleColor.DarkGreen);
 		}
 
 		// Affiche la liste des étudiants français boursiers
 		static void AfficherEtudiantsFrançaisBoursiers()
 		{
-			if (étudiants == null) return;
+			if (DAL.Etudiants == null) return;
 
-			Console.WriteLine("\nEtudiants français boursiers :\n");
+			AfficherTexte("Etudiants français boursiers :\n");
 			int cpt = 0;
 
-			for (int i = 0; i < étudiants.Length; i++)
+			for (int i = 0; i < DAL.Etudiants.Length; i++)
 			{
-				if (!(étudiants[i].statuts.HasFlag(Statuts.Etranger)) &
-					étudiants[i].statuts.HasFlag(Statuts.Boursier))
+				if (!DAL.Etudiants[i].statut.HasFlag(Statuts.Etranger) &
+					DAL.Etudiants[i].statut.HasFlag(Statuts.Boursier))
 				{
 					cpt++;
-					Console.WriteLine($"{étudiants[i].nom,-20}");
+					Console.WriteLine($"{DAL.Etudiants[i].nom,-20}");
 				}
 			}
 
-			Console.WriteLine($"\nTotal : {cpt} étudiants français boursiers");
-		}
-
-		/// <summary>
-		/// Remplace un ou plusieurs étudiants admis par les premiers non admis
-		/// </summary>
-		/// <param name="noms">noms des étudiants à remplacer</param>
-		static void RemplacerEtudiantsAdmis(params string[] noms)
-		{
-			if (étudiants == null) return;
-			Console.WriteLine();
-
-			int cptNouveaux = 0;
-
-			// Pour chaque étudiant à remplacer
-			for (int n = 0; n < noms.Length; n++)
-			{
-				bool trouvé = false;
-
-				// On recherche l'étudiant dans la liste
-				for (int i = 0; i < NbAdmis; i++)
-				{
-					if (étudiants[i].nom == noms[n])
-					{
-						// On enlève le statut admis de l'étudiant
-						étudiants[i].statuts ^= Statuts.Admis;
-
-						// On ajoute le statut Admis au premier non admis
-						étudiants[NbAdmis + cptNouveaux].statuts |= Statuts.Admis;
-
-						Console.WriteLine($"Remplacement de {noms[n]} par {étudiants[NbAdmis + cptNouveaux].nom}");
-						
-						// On incrémente le compteurs de nouveaux admis
-						cptNouveaux++;
-
-						trouvé = true;
-						break; // on sorte de la boucle
-					}
-				}
-				if (!trouvé)
-					Console.WriteLine($"Etudiant {noms[n]} non trouvé parmi les admis");
-			}
-			Console.WriteLine();
+			AfficherTexte($"\nTotal : {cpt} étudiants français boursiers", ConsoleColor.DarkGreen);
 		}
 	}
 }
