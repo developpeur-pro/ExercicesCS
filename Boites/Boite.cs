@@ -34,21 +34,27 @@ namespace Boites
 		public Matieres Matiere { get; } = Matieres.Carton;
 		public double Volume => Hauteur * Largeur * Longeur;
 
-		public string Destinataire { get; private set; } = string.Empty;
+		public Etiquette? EtiquetteColis { get; private set; }
 		public bool Fragile { get; private set; }
 
 		public static int NbBoites { get; private set; }
 		#endregion
 
 		#region Méthodes publiques
-		public void Etiqueter(string dest)
+		public void Etiqueter(Client dest, long numColis)
 		{
-			Destinataire = dest;
+			EtiquetteColis = new Etiquette
+			{
+				Destinataire = dest,
+				NumeroColis = numColis,
+				Couleur = Couleurs.Blanc,
+				Format = Formats.XL
+			};
 		}
 
-		public void Etiqueter(string dest, bool f)
+		public void Etiqueter(Client dest, long numColis, bool f)
 		{
-			Etiqueter(dest);
+			Etiqueter(dest, numColis);
 			Fragile = f;
 		}
 

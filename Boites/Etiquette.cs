@@ -11,7 +11,8 @@ namespace Boites
 	
 	internal class Etiquette
 	{
-		public required string Texte { get; init; } = string.Empty;
+		public required long NumeroColis { get; init; }
+		public required Client Destinataire { get; init; }
 		public required Couleurs Couleur { get; init; }
 		public required Formats Format { get; init; }
 	}
