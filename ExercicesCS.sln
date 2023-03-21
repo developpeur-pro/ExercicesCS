@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Concours", "Concours\Concou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boites", "Boites\Boites.csproj", "{01ADDA6E-79AA-440F-9366-1C74E747B985}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelesDocs", "ModelesDocs\ModelesDocs.csproj", "{92B74810-2F80-4F4A-B271-F90064498766}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelesDocs", "ModelesDocs\ModelesDocs.csproj", "{92B74810-2F80-4F4A-B271-F90064498766}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debogage", "Debogage\Debogage.csproj", "{BF2AB8D5-1BAB-4596-BFF3-B4D460131E5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{92B74810-2F80-4F4A-B271-F90064498766}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92B74810-2F80-4F4A-B271-F90064498766}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92B74810-2F80-4F4A-B271-F90064498766}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF2AB8D5-1BAB-4596-BFF3-B4D460131E5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2AB8D5-1BAB-4596-BFF3-B4D460131E5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2AB8D5-1BAB-4596-BFF3-B4D460131E5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2AB8D5-1BAB-4596-BFF3-B4D460131E5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
