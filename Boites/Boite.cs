@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 
 namespace Boites
 {
 	public enum Matieres { Carton, Plastique, Bois, Metal }
 
-	internal class Boite
+	public class Boite
 	{
 		private List<Article> _articles;
 
@@ -32,7 +26,7 @@ namespace Boites
 		#endregion
 
 		#region Propriétés
-		public double Hauteur { get; set; }
+		public double Hauteur { get; } = 30;
 		public double Largeur { get; } = 30;
 		public double Longeur { get; } = 30;
 		public Matieres Matiere { get; } = Matieres.Carton;

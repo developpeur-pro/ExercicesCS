@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Boites
+﻿namespace Boites
 {
-	internal class Article
+	public class Article
 	{
 		public string Libelle { get; }
 		public double Volume { get; }

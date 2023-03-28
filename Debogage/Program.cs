@@ -9,7 +9,7 @@
 			Console.ReadKey();
 			Console.Clear();
 
-			RechercherEtudiantParNom(étudiants, "leduc");
+			RechercherEtudiantParNom(étudiants, "Leduc");
 
 			Console.ReadKey();
 		}
@@ -50,9 +50,12 @@
 		{
 			AfficherTexte($"Recherche de l'étudiant(e) {recherche}:\n");
 
-			var res = étudiants.Find(e => e.Nom.StartsWith(recherche));
+			Etudiant? res = étudiants.Find(e => e.Nom.StartsWith(recherche));
 
-			Console.WriteLine($"{res.Nom} {res.Prénom}, moyenne = {res.Moyenne}");
+			if (res != null)
+				Console.WriteLine($"{res.Nom} {res.Prénom}, moyenne = {res.Moyenne}");
+			else
+				Console.WriteLine("Aucun étudiant ne correspond à cette recherche");
 		}
 	}
 }

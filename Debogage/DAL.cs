@@ -19,11 +19,11 @@ namespace Debogage
 		/// <returns>Liste d'étudiants</returns>
 		public static List<Etudiant> ChargerDonnées()
 		{
-			List<Etudiant> étudiants;
+			List<Etudiant> étudiants = new();
 
 			string[] lignes = File.ReadAllLines(NOM_FICHIER);
 
-			for (int l = 0; l < lignes.Length; l++)
+			for (int l = 1; l < lignes.Length; l++)
 			{
 				string[] infos = lignes[l].Split(';');
 
@@ -35,7 +35,7 @@ namespace Debogage
 				Etudiant e = new() {
 					Nom = infos[0],
 					Prénom = infos[1],
-					Moyenne = double.Parse(infos[2]),
+					Moyenne = double.Parse(infos[4]),
 					Statut = st
 				};
 
