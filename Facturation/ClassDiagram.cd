@@ -11,21 +11,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Faturation.Entreprise">
-    <Position X="0.5" Y="4" Width="1.5" />
+    <Position X="0.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAgAAEAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Clients.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Faturation.Etape">
-    <Position X="10" Y="3.75" Width="1.5" />
+    <Position X="7.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAABAMAAAAAAAAAAAQgAAAAAAAAAAAAAA=</HashCode>
       <FileName>Prestations.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Faturation.Facture">
-    <Position X="5" Y="0.75" Width="1.5" />
+    <Position X="4.75" Y="0.75" Width="1.5" />
     <Members>
       <Field Name="cpt" Hidden="true" />
     </Members>
@@ -39,7 +39,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Faturation.FactureSituation">
-    <Position X="5" Y="5" Width="1.5" />
+    <Position X="4.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Facture.cs</FileName>
@@ -53,14 +53,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Faturation.Prestation">
-    <Position X="7.5" Y="0.75" Width="1.75" />
+    <Position X="7.25" Y="0.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAgAAAAAAEAAAAAAABAAAAgAAAAAAABAAAAAA=</HashCode>
       <FileName>Prestations.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Faturation.PrestationLongTerme">
-    <Position X="7.5" Y="4.25" Width="1.75" />
+    <Position X="7.25" Y="3.75" Width="1.75" />
     <Members>
       <Field Name="_étapes" Hidden="true" />
     </Members>
