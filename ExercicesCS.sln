@@ -35,7 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bibliotheque", "Bibliothequ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenusActions", "MenusActions\MenusActions.csproj", "{B34A09D1-8C03-41D9-ABE8-B75322E93E4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionStock", "GestionStock\GestionStock.csproj", "{03AAB722-54B4-4ABC-BF4B-8B5297E1E530}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestionStock", "GestionStock\GestionStock.csproj", "{03AAB722-54B4-4ABC-BF4B-8B5297E1E530}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelechargeurImages", "TelechargeurImages\TelechargeurImages.csproj", "{16744300-BA4B-4860-BA50-AEC88E34523F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{03AAB722-54B4-4ABC-BF4B-8B5297E1E530}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03AAB722-54B4-4ABC-BF4B-8B5297E1E530}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03AAB722-54B4-4ABC-BF4B-8B5297E1E530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16744300-BA4B-4860-BA50-AEC88E34523F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16744300-BA4B-4860-BA50-AEC88E34523F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16744300-BA4B-4860-BA50-AEC88E34523F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16744300-BA4B-4860-BA50-AEC88E34523F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
