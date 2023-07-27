@@ -39,6 +39,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestionStock", "GestionStoc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelechargeurImages", "TelechargeurImages\TelechargeurImages.csproj", "{16744300-BA4B-4860-BA50-AEC88E34523F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassesEtendues", "ClassesEtendues\ClassesEtendues.csproj", "{322C321A-3CC4-41BB-8D47-BD14C9EF34B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaisieAutomatisée", "SaisieAutomatisée\SaisieAutomatisée.csproj", "{5B0652DC-6959-429F-915C-5AFCF3425394}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +121,14 @@ Global
 		{16744300-BA4B-4860-BA50-AEC88E34523F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16744300-BA4B-4860-BA50-AEC88E34523F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16744300-BA4B-4860-BA50-AEC88E34523F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{322C321A-3CC4-41BB-8D47-BD14C9EF34B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322C321A-3CC4-41BB-8D47-BD14C9EF34B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322C321A-3CC4-41BB-8D47-BD14C9EF34B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322C321A-3CC4-41BB-8D47-BD14C9EF34B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B0652DC-6959-429F-915C-5AFCF3425394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B0652DC-6959-429F-915C-5AFCF3425394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B0652DC-6959-429F-915C-5AFCF3425394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B0652DC-6959-429F-915C-5AFCF3425394}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
