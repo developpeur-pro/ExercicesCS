@@ -5,33 +5,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Concours
+namespace Concours;
+
+internal enum Mentions { E=0, P=10, AB=12, B=14, TB=16 }
+
+internal class Notation
 {
-	internal enum Mentions { E=0, P=10, AB=12, B=14, TB=16 }
+	static string[] LibellésMentions = { "Echec", "Passable", "Assez bien", "Bien", "Très bien" };
+	
 
-	internal class Notation
+	public static (Mentions, string) GetMention(double note)
 	{
-		static string[] LibellésMentions = { "Echec", "Passable", "Assez bien", "Bien", "Très bien" };
-		
+		Mentions mention = Mentions.E;
+		string libellé = LibellésMentions[0];
 
-		public static (Mentions, string) GetMention(double note)
+		int cpt = 0;
+		foreach (Mentions m in Enum.GetValues(typeof(Mentions)))
 		{
-			Mentions mention = Mentions.E;
-			string libellé = LibellésMentions[0];
-
-			int cpt = 0;
-			foreach (Mentions m in Enum.GetValues(typeof(Mentions)))
+			if ((int)m <= note)
 			{
-				if ((int)m <= note)
-				{
-					mention = m;
-					libellé = LibellésMentions[cpt++];
-				}
-				else
-					break;
+				mention = m;
+				libellé = LibellésMentions[cpt++];
 			}
-
-			return (mention, libellé);
+			else
+				break;
 		}
+
+		return (mention, libellé);
 	}
 }

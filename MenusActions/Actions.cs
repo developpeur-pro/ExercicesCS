@@ -1,15 +1,14 @@
-﻿namespace MenusActions
-{
-	public class Actions
-	{
-		public static void Action1()
-		{
-			Console.WriteLine("Exécution de l'action 1");
-		}
+﻿namespace MenusActions;
 
-		public static void Action2()
-		{
-			Console.WriteLine("Exécution de l'action 2");
-		}
+public class Actions
+{
+	public static void Action1()
+	{
+		Console.WriteLine("Exécution de l'action 1");
+	}
+
+	public static void Action2()
+	{
+		Console.WriteLine("Exécution de l'action 2");
 	}
 }

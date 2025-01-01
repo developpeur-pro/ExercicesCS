@@ -1,21 +1,20 @@
-﻿namespace SaisieAutomatisée
+﻿namespace SaisieAutomatisée;
+
+internal class Program
 {
-	internal class Program
+	static void Main(string[] args)
 	{
-		static void Main(string[] args)
-		{
-			TesterSaisieCompte();
-		}
+		TesterSaisieCompte();
+	}
 
-		static void TesterSaisieCompte()
-		{
-			Console.WriteLine("Saisie d'un client\n");
+	static void TesterSaisieCompte()
+	{
+		Console.WriteLine("Saisie d'un client\n");
 
-			Client client = new();
-			client.SaisirValeursPropriétés();
-			//Input.SaisirValeursPropriétés(client);
+		Client client = new();
+		client.SaisirValeursPropriétés();
+		//Input.SaisirValeursPropriétés(client);
 
-			Console.WriteLine($"\nCompte créé : {client.Nom}, {client.Prenom}, {client.DateNais:d}");
-		}
+		Console.WriteLine($"\nCompte créé : {client.Nom}, {client.Prenom}, {client.DateNais:d}");
 	}
 }
