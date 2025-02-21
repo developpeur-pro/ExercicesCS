@@ -28,8 +28,8 @@ public class Stock
 			throw new InvalidOperationException($"Quantité en stock insuffisante ({etatStock})");
 
 		// Si la quantité en stock devient inférieure au seuil défini, on émet un évènement
-		if (etatStock < SeuilAlerte)
-			AlerteStockBas?.Invoke(this, (date, etatStock));
+		if (etatStock - quantité < SeuilAlerte)
+			AlerteStockBas?.Invoke(this, (date, etatStock - quantité));
 	}
 
 	// Remet le stock à zéro à la date spécifiée
