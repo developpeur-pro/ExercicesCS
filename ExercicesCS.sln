@@ -43,6 +43,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassesEtendues", "ClassesE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaisieAutomatisée", "SaisieAutomatisée\SaisieAutomatisée.csproj", "{5B0652DC-6959-429F-915C-5AFCF3425394}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassificationPériodique", "ClassificationPériodique\ClassificationPériodique.csproj", "{49822129-8E0B-48F8-9604-4461A8C3A3CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{5B0652DC-6959-429F-915C-5AFCF3425394}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B0652DC-6959-429F-915C-5AFCF3425394}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B0652DC-6959-429F-915C-5AFCF3425394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49822129-8E0B-48F8-9604-4461A8C3A3CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49822129-8E0B-48F8-9604-4461A8C3A3CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49822129-8E0B-48F8-9604-4461A8C3A3CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49822129-8E0B-48F8-9604-4461A8C3A3CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,138 @@
+﻿Familles :
+ 1 Métaux alcalins
+ 2 Métaux alcalino-terreux	 
+ 3 Lanthanides  	  
+ 4 Actinides
+ 5 Métaux de transition	
+ 6 Métaux pauvres  	 
+ 7 Métalloïdes  	
+ 8 Non-métaux  	 
+ 9 Halogènes
+10 Gaz nobles
+11 Éléments non classés
+
+Etats :
+S Solide
+L Liquide
+G Gaz
+I Inconnu
+
+Elements (période, numéro atomique, symbole, état naturel, famille, nom) :
+1   1 H  G  8 Hydrogène
+1   2 He G 10 Hélium
+2   3 Li S  1 Lithium
+2   4 Be S  2 Béryllium
+2   5 B  S  7 Bore
+2   6 C  S  8 Carbone
+2   7 N  G  8 Azote
+2   8 O  G  8 Oxygène
+2   9 F  G  9 Fluor
+2  10 Ne G 10 Néon
+3  11 Na S  1 Sodium
+3  12 Mg S  2 Magnésium
+3  13 Al S  6 Aluminium
+3  14 Si S  7 Silicium
+3  15 P  S  8 Phosphore
+3  16 S  S  8 Soufre
+3  17 Cl G  9 Chlore
+3  18 Ar G 10 Argon
+4  19 K  S  1 Potassium
+4  20 Ca S  2 Calcium
+4  21 Sc S  5 Scandium
+4  22 Ti S  5 Titane
+4  23 V  S  5 Vanadium
+4  24 Cr S  5 Chrome
+4  25 Mn S  5 Manganèse
+4  26 Fe S  5 Fer
+4  27 Co S  5 Cobalt
+4  28 Ni S  5 Nickel
+4  29 Cu S  5 Cuivre
+4  30 Zn S  5 Zinc
+4  31 Ga S  6 Gallium
+4  32 Ge S  7 Germanium
+4  33 As S  7 Arsenic
+4  34 Se S  8 Sélénium
+4  35 Br L  9 Brome
+4  36 Kr G 10 Krypton
+5  37 Rb S  1 Rubidium
+5  38 Sr S  2 Strontium
+5  39 Y  S  5 Yttrium
+5  40 Zr S  5 Zirconium
+5  41 Nb S  5 Niobium
+5  42 Mo S  5 Molybdène
+5  43 Tc S  5 Technétium
+5  44 Ru S  5 Ruthénium
+5  45 Rh S  5 Rhodium
+5  46 Pd S  5 Palladium
+5  47 Ag S  5 Argent
+5  48 Cd S  5 Cadmium
+5  49 In S  6 Indium
+5  50 Sn S  6 Étain
+5  51 Sb S  7 Antimoine
+5  52 Te S  7 Tellure
+5  53 I  S  9 Iode
+5  54 Xe G 10 Xénon
+6  55 Cs S  1 Césium
+6  56 Ba S  2 Baryum
+6  57 La S  3 Lanthane
+6  58 Ce S  3 Cérium
+6  59 Pr S  3 Praséodyme
+6  60 Nd S  3 Néodyme
+6  61 Pm S  3 Prométhium
+6  62 Sm S  3 Samarium
+6  63 Eu S  3 Europium
+6  64 Gd S  3 Gadolinium
+6  65 Tb S  3 Terbium
+6  66 Dy S  3 Dysprosium
+6  67 Ho S  3 Holmium
+6  68 Er S  3 Erbium
+6  69 Tm S  3 Thulium
+6  70 Yb S  3 Ytterbium
+6  71 Lu S  3 Lutécium
+6  72 Hf S  5 Hafnium
+6  73 Ta S  5 Tantale
+6  74 W  S  5 Tungstène
+6  75 Re S  5 Rhénium
+6  76 Os S  5 Osmium
+6  77 Ir S  5 Iridium
+6  78 Pt S  5 Platine
+6  79 Au S  5 Or
+6  80 Hg L  5 Mercure
+6  81 Tl S  6 Thallium
+6  82 Pb S  6 Plomb
+6  83 Bi S  6 Bismuth
+6  84 Po S  6 Polonium
+6  85 At S  9 Astate
+6  86 Rn G 10 Radon
+7  87 Fr S  1 Francium
+7  88 Ra S  2 Radium
+7  89 Ac S  4 Actinium
+7  90 Th S  4 Thorium
+7  91 Pa S  4 Protactinium
+7  92 U  S  4 Uranium
+7  93 Np S  4 Neptunium
+7  94 Pu S  4 Plutonium
+7  95 Am S  4 Américium
+7  96 Cm S  4 Curium
+7  97 Bk S  4 Berkélium
+7  98 Cf S  4 Californium
+7  99 Es S  4 Einsteinium
+7 100 Fm S  4 Fermium
+7 101 Md S  4 Mendélévium
+7 102 No S  4 Nobélium
+7 103 Lr S  4 Lawrencium
+7 104 Rf S  5 Rutherfordium
+7 105 Db S  5 Dubnium
+7 106 Sg S  5 Seaborgium
+7 107 Bh S  5 Bohrium
+7 108 Hs S  5 Hassium
+7 109 Mt I 11 Meitnérium
+7 110 Ds I 11 Darmstadtium
+7 111 Rg I 11 Roentgenium
+7 112 Cn I 11 Copernicium
+7 113 Nh I 11 Nihonium
+7 114 Fl I 11 Flérovium
+7 115 Mc I 11 Moscovium
+7 116 Lv I 11 Livermorium
+7 117 Ts I 11 Tennesse
+7 118 Og I 11 Oganesson
